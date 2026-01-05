@@ -1,0 +1,151 @@
+[
+  {
+    "name": "Cheeseburger",
+    "category": "beef",
+    "difficulty": 1,
+    "steps": ["bun 4", "moutarde", "ketchup", "cornichonx2", "fromage", "patty hamburger", "bun 4 down"]
+  },
+  {
+    "name": "Hamburger",
+    "category": "beef",
+    "difficulty": 1,
+    "steps": ["bun 4", "moutarde", "ketchup", "cornichonx2", "patty hamburger", "bun 4 down"]
+  },
+  {
+    "name": "Cheeseburger Bacon",
+    "category": "beef",
+    "difficulty": 1,
+    "steps": ["bun 4", "moutarde", "ketchup", "baconx2", "cornichonx2", "fromage", "patty hamburger", "bun 4 down"]
+  },
+  {
+    "name": "Double Cheese",
+    "category": "beef",
+    "difficulty": 1,
+    "steps": ["bun 4", "moutarde", "ketchup", "cornichonx2", "fromage", "patty hamburger", "fromage", "patty hamburger", "bun 4 down"]
+  },
+  {
+    "name": "Double Cheese Bacon",
+    "category": "beef",
+    "difficulty": 2,
+    "steps": ["bun hamburger", "moutarde", "ketchup", "cornichonx2", "baconx2", "fromage", "patty hamburger", "fromage", "patty hamburger", "bun hamburger down"]
+  },
+  {
+    "name": "Double King",
+    "category": "beef",
+    "difficulty": 1,
+    "steps": ["bun hamburger", "sauce cajun", "laitue", "fromage", "patty hamburger", "patty hamburger", "bun hamburger down"]
+  },
+    {
+        "name": "Fish Burger",
+        "category": "fish",
+        "difficulty": 1,
+        "steps": ["bun 4", "ketchup", "patty fish", "bun 4 down"]
+    }
+,{
+    "name": "King fish",
+    "category": "fish",
+    "difficulty": 1,
+    "steps": ["bun hamburger", "sauce cajun", "laitue", "patty fish", "bun hamburger down"]
+},
+{
+    "name": "Big Fish",
+    "category": "fish",
+    "difficulty": 1,
+    "steps": ["bun 4", "sauce king", "laitue", "fromage", "patty fish","sauce king","bun 4 down"]
+},
+{
+    "name":"Big King",
+    "category":"beef",
+    "difficulty":2,
+    "steps":["bun 4","sauce king","laitue","onionx2","cornichonx2","fromage","patty hamburger","fromage","patty hamburger","bun 4 down"]
+},
+{
+    "name":"Wrap Crousty Chevre",
+    "category":"veggie",
+    "difficulty":1,
+    "steps":["tomatex2","laitue","fromagex2","crousty chevresx4","onions frits","sauce cajun","tortilla"]
+},
+{
+    "name":"Wrap Chicken Louisiane",
+    "category":"chicken",
+    "difficulty":1,
+    "steps":["tomatex2","laitue","fromagex2","patty chrispy chicken","onions frits","sauce cajun","tortilla"]
+},
+{
+    "name":"Wrap Chicken Cheese&bacon",
+    "category":"chicken",
+    "difficulty":1,
+    "steps":["laitue","baconx2","sauce_bbq","fromagex2","patty chrispy chicken","onions frits","mayonnaise","tortilla"]
+}
+,
+{
+    "name":"Whopper",
+    "category":"beef",
+    "difficulty":2,
+    "steps":["bun 5","mayonnaise","laitue","tomatex2","onionx3","ketchup","cornichonx4","patty whopper","bun 5 down"]
+}
+,{
+    "name":"Double Whopper Cheese",
+    "category":"beef",
+    "difficulty":3,
+    "steps":["bun 5","mayonnaise","laitue","tomatex2","onionx3","ketchup","cornichonx4","fromage","patty whopper","patty whopper","bun 5 down"]
+}
+,
+{
+    "name":"Big King XXL",
+    "category":"beef",
+    "difficulty":3,
+    "steps":["bun 5","sauce king","laitue","onionx3","cornichonx4","fromagex2","patty whopper","fromagex2","patty whopper","bun 5 down"]
+},
+{
+        "name":"Steakhouse"
+        ,"category":"beef",
+        "difficulty":3, 
+        "steps":["bun 4.5","mayonnaise","onions frits","laitue","tomatex2","onions frits","sauce_bbq","baconx3","fromagex2","patty whopper","bun 4.5 down"]
+ },
+{
+        "name":"Double Steakhouse",
+        "category":"beef",
+        "difficulty":3,
+        "steps":["bun 4.5","mayonnaise","onions frits","laitue","tomatex2","onions frits","sauce_bbq","baconx3","fromagex2","patty whopper","fromagex2","patty whopper","bun 4.5 down"]
+} ,
+{
+    "name":"Double Cheese Bacon XXL",
+    "category":"beef",
+    "difficulty":3,
+    "steps":["bun 5","moutarde","ketchup","cornichonx4","baconx3","fromagex2","patty whopper","fromagex2","patty hamburger","bun 5 down"]
+},
+
+{
+    "name": "Rodeo Whopper",
+    "category": "beef",
+    "difficulty": 3,
+    "steps": ["bun 5", "mayonnaise","laitue", "tomatex2","onion ringsx3", "onionx3","ketchup", "cornichonx4","fromagex2","patty whopper", "bun 5 down"]
+}
+,
+{
+    "name":"Master Cantal Poulet",
+    "category":"chicken",
+    "difficulty":2,
+    "steps":["bun shiny","sauce moutancienne","onions frits","onions caramelises","roquette","cantalx2","patty chicken premium","sauce moutancienne","bun shiny down"]
+}
+,
+{
+    "name": "Master Montagnard",
+    "category": "beef",
+    "difficulty": 3,
+    "steps": ["bun shiny couronne", "echalote",  "onions caramelises", "onionx3", "cornichonx4", "baconx3", "raclettes fumeesx2", "patty master","echalote", "bun shiny couronne down"]
+},{
+    "name": "Master Rosti Montagnard",
+    "category": "chicken",
+    "difficulty": 3,
+    "steps": ["bun shiny couronne", "echalote", "onions caramelises", "onionx3","cornichonx4", "baconx3", "raclettes fumeesx2","rosti","patty chicken premium", "echalote","bun shiny down"]
+},
+{
+    "name": "Master Poulet Montagnard",
+    "category": "chicken",
+    "difficulty": 3,
+    "steps": ["bun shiny couronne", "echalote", "onions caramelises", "onionx3","cornichonx4", "baconx3", "raclettes fumeesx2","patty chicken premium", "echalote","bun shiny down"]
+}
+
+]

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Jeu Mémoire Burger</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+    <div id="menu" class="menu-screen">
+      <div class="menu-card">
+    <div class="menu-logo">🍔</div>
+        <h2>🎮 Choisissez le mode</h2>
+      
+        <button onclick="startCategoryMode()" disabled>🐮🐔🐟🥬 Mode Catégorie</button>
+        <button onclick="startProgressionMode()" disabled>🔥 Mode Progression</button>
+      </div>
+    </div>
+
+      
+      <div id="category-select" class="menu-screen" style="display:none">
+        <div class="menu-card category-card">
+        <h2>Choisissez une catégorie</h2>
+        <button onclick="selectCategory('beef')"><span>🥩 Bœuf</span></button>
+        <button onclick="selectCategory('chicken')"><span>🍗 Poulet</span></button>
+        <button onclick="selectCategory('fish')"><span>🐟 Poisson</span></button>
+        <button onclick="selectCategory('veggie')"><span>🥬 Veggie</span></button>
+</div>
+      </div>
+      <div id="timer">⏱️ 0 s</div>
+
+      <div id="game" style="display:none">
+        <h1 id="burger-name"></h1>
+
+<div class="top-bar">
+        <button onclick="pauseTimer()">⏸️ Pause</button>
+        <button onclick="restartGame()">🔄 Restart</button>
+        <button onclick="goBackToMenu()">⬅️ Retour au menu</button>
+        <button onclick="showAnswer()">😭 Je veux voir la solution</button>
+
+</div>
+        
+      <div class="game-layout">
+          <div class="ingredients-panel">
+
+        <h3>Choisissez les ingrédients :</h3>
+        <div id="ingredients">
+  <!-- 🥯 Pains -->
+  <div class="ingredient-group">
+    <h4>🥯 Pains</h4>
+    <div class="ingredient-list">
+
+          <button onclick="choose('bun 4')"><img src="assets/icons/bun_4.svg" alt="Bun 4" width="24" height="24">
+            Bun 4</button>
+            <button onclick="choose('bun 4 down')"><img src="assets/icons/bun_4 down.svg" alt="Bun 4 down" width="24" height="24">
+            Bun 4 down</button>
+             <button onclick="choose('bun hamburger')"><img src="assets/icons/bun hamburger.svg" alt="bun hamburger" width="24" height="24">
+            Bun hamburger</button>
+            <button onclick="choose('bun hamburger down')"><img src="assets/icons/bun hamburger down.svg" alt="bun hamburger down" width="24" height="24">
+            Bun hamburger down</button>
+          
+            <button onclick="choose('bun 5')"><img src="assets/icons/bun 5.svg" alt="bun 5" width="24" height="24">
+                Bun 5</button>
+            <button onclick="choose('bun 5 down')"><img src="assets/icons/bun 5 down.svg" alt="bun 5 down" width="24" height="24">
+                Bun 5 down</button>
+
+           <button onclick="choose('bun 4.5')"><img src="assets/icons/bun 4.5.svg" alt="bun 4.5" width="24" height="24">
+                Bun 4.5</button>
+            <button onclick="choose('bun 4.5 down')"><img src="assets/icons/bun 4.5 down.svg" alt="bun 4.5 down" width="24" height="24">
+                Bun 4.5 down</button>
+           <button onclick="choose('bun shiny')"><img src="assets/icons/bun shiny.svg" alt="bun shiny" width="24" height="24">
+                Bun shiny</button>
+                <button onclick="choose('bun shiny down')"><img src="assets/icons/bun shiny down.svg" alt="bun shiny down" width="24" height="24">
+                Bun shiny down</button>
+                <button onclick="choose('bun shiny couronne')"><img src="assets/icons/bun shiny couronne.svg" alt="bun shiny couronne" width="24" height="24">
+                Bun shiny couronne</button> 
+                <button onclick="choose('bun shiny couronne down')"><img src="assets/icons/bun shiny couronne down.svg" alt="bun shiny couronne down" width="24" height="24">
+                Bun shiny couronne down</button>
+          <button onclick="choose('tortilla')"><img src="assets/icons/tortilla.svg" alt="tortilla" width="24" height="24">
+                Tortilla</button>
+
+    </div>
+  </div>
+
+  <!-- 🥩 Garnitures -->
+  <div class="ingredient-group">
+    <h4>🥩 Garnitures</h4>
+    <div class="ingredient-list">
+<button onclick="choose('patty hamburger')"><img src="assets/icons/patty hamburger.svg" alt="Steak" width="24" height="24">
+            Patty hamburger</button>
+          <button onclick="choose('patty master')"><img src="assets/icons/patty master.svg" alt="Steak" width="24" height="24">
+            Patty master</button>
+          <button onclick="choose('patty whopper')"><img src="assets/icons/patty whopper.svg" alt="Steak" width="24" height="24">
+            Patty whopper</button>
+          <button onclick="choose('patty fish')"><img src="assets/icons/patty fish.svg" alt="patty fish" width="24" height="24">
+                Patty fish</button>
+          <button onclick="choose('patty chicken premium')"><img src="assets/icons/patty chicken premium.svg" alt="patty chicken premium" width="24" height="24">
+                Patty chicken premium</button>
+          <button onclick="choose('patty chrispy chicken')"><img src="assets/icons/patty chrispy chicken.svg" alt="patty chrispy chicken" width="24" height="24">
+                Patty chrispy chicken</button>
+          <button onclick="choose('fromage')"><img src="assets/icons/fromage.svg" alt="Fromage" width="24" height="24">
+            Fromage</button>
+            <button onclick="choose('fromagex2')"><img src="assets/icons/fromagex2.svg" alt="fromagex2" width="24" height="24">
+                Fromagex2</button>
+           <button onclick="choose('cantalx2')"><img src="assets/icons/cantalx2.svg" alt="cantalx2" width="24" height="24">
+                Cantalx2</button>
+           <button onclick="choose('raclettes fumeesx2')"><img src="assets/icons/raclettes fumeesx2.svg" alt="raclettes fuméesx2" width="24" height="24">
+                Raclettes fuméesx2</button>
+           
+          <button onclick="choose('laitue')"><img src="assets/icons/laitue.svg" alt="Laitue" width="24" height="24">
+            Laitue</button>
+          <button onclick="choose('roquette')"><img src="assets/icons/roquette.svg" alt="roquette" width="24" height="24">
+                Roquette</button>
+          
+          <button onclick="choose('cornichonx2')"><img src="assets/icons/cornichonx2.svg" alt="Cornichonx2" width="24" height="24">
+            Cornichonx2</button>
+             <button onclick="choose('cornichonx4')"><img src="assets/icons/cornichonx4.svg" alt="cornichonx4" width="24" height="24">
+                Cornichonx4</button>
+            <button onclick="choose('tomate')"><img src="assets/icons/tomate.svg" alt="Tomate" width="24" height="24">
+            Tomate</button>
+            <button onclick="choose('tomatex2')"><img src="assets/icons/tomatex2.svg" alt="tomatex2" width="24" height="24">
+                Tomatex2</button>
+            <button onclick="choose('onionx2')"><img src="assets/icons/onionx2.svg" alt="Onionx2" width="24" height="24">
+            Onionx2</button>
+            <button onclick="choose('onionx3')"><img src="assets/icons/onionx3.svg" alt="onionx3"width="24" height="24">Onionx3  </button>
+             <button onclick="choose('onion ringsx3')"><img src="assets/icons/onion ringsx3.svg" alt="onion ringsx3" width="24" height="24">
+                Onion ringsx3</button>
+               <button onclick="choose('onions caramelises')"><img src="assets/icons/onions caramelises.svg" alt="onions caramelises" width="24" height="24">
+                Onions caramelises</button>
+                 <button onclick="choose('onions frits')"><img src="assets/icons/onions frits.svg" alt="onions frits" width="24" height="24">
+                Onions frits</button>
+
+            <button onclick="choose('baconx2')"><img src="assets/icons/baconx2.svg" alt="Baconx2" width="24" height="24">
+            Baconx2</button>
+             <button onclick="choose('baconx3')"><img src="assets/icons/baconx3.svg" alt="Baconx3" width="24" height="24">
+            Baconx3</button>
+            <button onclick="choose('crousty chevresx4')"><img src="assets/icons/crousty chevresx4.svg" alt="crousty chevresx4" width="24" height="24">
+                Crousty chevresx4</button>       
+                <button onclick="choose('rosti')"><img src="assets/icons/rosti.svg" alt="rosti" width="24" height="24">
+                Rosti</button>
+                
+    </div>
+  </div>
+               
+
+
+
+ <!-- 🥫 Sauces -->
+  <div class="ingredient-group">
+    <h4>🥫 Sauces</h4>
+    <div class="ingredient-list">
+
+            <button onclick="choose('ketchup')"> <img src="assets/icons/ketchup.svg" alt="Ketchup" width="24" height="24">
+            Ketchup</button>
+          <button onclick="choose('moutarde')"><img src="assets/icons/moutarde.svg" alt="Moutarde" width="24" height="24">
+            Moutarde</button>           
+            <button onclick="choose('sauce cajun')"><img src="assets/icons/sauce cajun.svg" alt="sauce cajun" width="24" height="24">
+                Sauce cajun</button> 
+            <button onclick="choose('sauce king')"><img src="assets/icons/sauce king.svg" alt="sauce king" width="24" height="24">
+                Sauce king</button>
+            <button onclick="choose('sauce_bbq')"><img src="assets/icons/sauce_bbq.svg" alt="sauce BBQ" width="24" height="24">
+                Sauce BBQ</button>
+            <button onclick="choose('mayonnaise')"><img src="assets/icons/mayonnaise.svg" alt="mayonnaise" width="24" height="24">
+                Mayonnaise</button>
+             <button onclick="choose('echalote')"><img src="assets/icons/echalote.svg" alt="sauce creamy echalote" width="24" height="24">
+                Sauce creamy echalote</button>
+            <button onclick="choose('sauce moutancienne')"><img src="assets/icons/sauce moutancienne.svg" alt="sauce moutancienne" width="24" height="24">
+                Sauce moutancienne</button>
+    </div>
+  </div> 
+               
+        
+        </div>
+          </div>
+          <div class="burger-panel">
+          <h3>Votre burger :</h3>
+
+
+         <div class="burger-display"> 
+         <div id="burger"></div>
+        <!-- 👀 Solution Overlay -->
+  <div id="solution-overlay" class="solution-overlay" style="display:none">
+    <div class="solution-card">
+      <!-- ❌ 关闭按钮 -->
+    <button class="close-solution" onclick="hideSolutionOverlay()">✕</button>
+
+      <div class="solution-icon">👀</div>
+      <h3>Solution affichée</h3>
+      <p>L’essai est terminé.<br>Observez bien l’ordre des ingrédients 🍔</p>
+    </div>
+  </div>
+
+
+         <div id="result"></div>
+
+         </div>
+        </div>
+        </div>
+             </div>
+      
+
+<script src="script.js"></script> 
+
+
+
+</body>
+</html>
+
+
+

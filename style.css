@@ -1,0 +1,363 @@
+body {
+  font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+  background: linear-gradient(#fff5e6, #ffe0b2);
+  margin: 0;
+ 
+}
+
+
+  
+  .game-layout {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+/* =========================
+   🎮 首页 Menu 美化
+========================= */
+
+.menu-screen {
+  position: fixed;
+  inset: 0;
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255,255,255,0.6);
+  z-index: 10;
+}
+
+.menu-card {
+  background: #fff;
+  border-radius: 26px;
+  padding: 40px 45px;
+  width: 360px;
+  max-width: 90%;
+  text-align: center;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+  margin: 100px auto;
+}
+
+.menu-logo {
+  font-size: 72px;
+  margin-bottom: 10px;
+}
+
+.menu-card h2 {
+  margin: 10px 0 30px;
+  color: #d62300;
+  font-size: 26px;
+}
+
+/* 🎮 模式按钮 */
+.menu-card button {
+  width: 100%;
+  margin-bottom: 18px;
+  padding: 16px 10px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 22px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(180deg, #ff5f3d, #d62300);
+  box-shadow: 0 8px 0 #a91b00;
+  transition: all 0.15s ease;
+}
+
+.menu-card button span {
+  font-size: 13px;
+  font-weight: normal;
+  display: block;
+  margin-top: 4px;
+}
+
+.menu-card button:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 11px 0 #a91b00;
+}
+
+.menu-card button:active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow: 0 4px 0 #a91b00;
+}
+
+.menu-card button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* 🔥 Progression 特别色 */
+.menu-card button.fire {
+  background: linear-gradient(180deg, #ff9f1c, #ff6f00);
+  box-shadow: 0 8px 0 #cc5500;
+}
+
+.menu-card button.fire:hover:not(:disabled) {
+  box-shadow: 0 11px 0 #cc5500;
+}
+/* =========================
+   📂 Category Select
+========================= */
+
+.category-card h2 {
+  color: #d62300;
+  margin-bottom: 25px;
+}
+/* 分类按钮更像“选择卡” */
+.category-card button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  font-size: 22px;
+  padding: 18px 10px;
+}
+
+.category-card button span {
+  font-size: 16px;
+}
+
+/* hover 手感更“游戏” */
+.category-card button:hover:not(:disabled) {
+  transform: scale(1.04);
+}
+/* 左边：配料 */
+.ingredients-panel {
+  width: 45%;
+  max-height: 70vh;
+  overflow-y: auto;
+  border-right: 2px solid #ddd;
+  padding-right: 10px;
+}
+
+  #ingredients {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+#ingredients button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  padding: 6px 8px;
+  border-radius: 10px;
+  border: none;
+  background: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  transition: all 0.15s ease;
+}
+
+#ingredients button:hover {
+  transform: scale(1.05);
+  background: #ffe8cc;
+}
+
+.ingredient-group {
+  margin-bottom: 14px;
+  padding: 8px;
+  background: #fff7e6;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 2px #ffe69c;
+
+}
+
+.ingredient-group h4 {
+  margin: 4px 0 8px;
+  font-size: 14px;
+  color: #b22222;
+  text-align: left;
+}
+
+.ingredient-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+  
+ /* 右边：汉堡 */
+.burger-panel {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.burger-display {
+  background: #fffaf0;
+  border-radius: 20px;
+  padding: 30px;
+  min-height: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 0 3px #ffcc80;
+}
+
+
+#burger {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 🍔 汉堡更大 */
+#burger img {
+  width: 110px;        /* ⭐ 关键：放大 */
+  margin-bottom: -15px; /* 让它们叠在一起 */
+  z-index: 1;
+}
+
+
+/* 顶部按钮条 */
+.top-bar {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 10px 0 20px;
+}
+
+.top-bar button {
+  background: #d62300;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 14px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.top-bar button:hover {
+  background: #a91b00;
+}
+
+  /* 结果显示 */
+  
+  .correct {
+  color: green;
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+.wrong {
+  color: red;
+  font-size: 36px;
+  margin-top: 10px;
+}
+
+  /* 👀 Solution Overlay */
+.solution-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(2px);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.burger-display {
+  position: relative; /* ⭐ 关键 */
+}
+
+.solution-card {
+  pointer-events: auto; /* 卡片本身可点击 */
+
+  position: relative;
+  margin: 16px;
+
+  background: rgba(255,255,255,0.95);
+  border-radius: 18px;
+  padding: 20px 18px 16px;
+  width: 260px;
+
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+  animation: slideIn 0.25s ease;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.solution-icon {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.solution-card h3 {
+  font-size: 16px;
+  margin: 4px 0 6px;
+  color: #d62300;
+}
+
+.solution-card p {
+  font-size: 13px;
+  color: #666;
+}
+
+
+/* 小动画 */
+@keyframes popIn {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.close-solution {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  width: 28px;
+  height: 28px;
+
+  border: none;
+  border-radius: 50%;
+  background: #eee;
+
+  font-size: 16px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-solution:hover {
+  background: #d62300;
+  color: white;
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+  
